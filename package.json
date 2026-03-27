@@ -7,7 +7,18 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
+    "prepare": "husky",
     "preview": "vite preview"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,css}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -17,9 +28,13 @@
     "@tanstack/react-query-persist-client": "^5.95.2",
     "axios": "^1.14.0",
     "clsx": "^2.1.1",
+    "husky": "^9.1.7",
     "i18next": "^25.10.10",
     "i18next-browser-languagedetector": "^8.2.1",
+    "lint-staged": "^16.4.0",
     "localforage": "^1.10.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-hook-form": "^7.72.0",

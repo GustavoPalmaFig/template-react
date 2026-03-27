@@ -8,7 +8,9 @@
   "importSorter.categoryNewLineCount": 0,
   "importSorter.newLineCount": 1,
   "commit-message-editor.view.defaultView": "form",
-  "commit-message-editor.dynamicTemplate": ["{type}{scope}{breaking_change}: {description}"],
+  "commit-message-editor.dynamicTemplate": [
+    "{type}{scope}{breaking_change}: {description}"
+  ],
   "commit-message-editor.tokens": [
     {
       "label": "Type",
